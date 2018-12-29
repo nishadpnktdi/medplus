@@ -20,15 +20,15 @@
           <div class="card-body">
             <h5 class="card-title text-center">Sign In</h5>
             <form method="POST" action="<?php echo base_url(); ?>user/login" class="form-signin">
-            	<span class=""><?php echo $this->session->flashdata('msg'); ?></span>
+            	<?php echo $this->session->flashdata('msg');?>
 
               <div class="form-label-group">
-                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
                 <label for="inputEmail">Email address</label>
               </div>
 
               <div class="form-label-group">
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
                 <label for="inputPassword">Password</label>
               </div>
 
