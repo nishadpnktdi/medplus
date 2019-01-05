@@ -19,9 +19,8 @@
         <div class="card card-signin my-5">
           <div class="card-body">
             <h5 class="card-title text-center">Sign In</h5>
+            <div class="text-center my-2 text-danger"><?php echo $this->session->flashdata('msg');?></div>
             <form method="POST" action="<?php echo base_url(); ?>user/login" class="form-signin">
-            	<?php echo $this->session->flashdata('msg');?>
-
               <div class="form-label-group">
                 <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
                 <label for="inputEmail">Email address</label>
@@ -41,9 +40,10 @@
               	<a href="#">Forgot password?</a>
               </div>
               <hr class="my-4">
-              <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign in with Google</button>
+              <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit">
+              	<i class="fab fa-google mr-2"></i> Sign in with Google</button>
               <div class="text-center my-3">OR</div>
-              <a href="signup_page" class="btn btn-lg btn-facebook btn-block text-uppercase"> Create an account</a>
+              <a href="<?php echo base_url(); ?>user/signup_page" class="btn btn-lg btn-facebook btn-block text-uppercase"> Create an account</a>
             </form>
           </div>
         </div>

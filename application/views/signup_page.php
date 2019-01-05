@@ -15,7 +15,7 @@
 <body>
   <div class="container">
     <div class="row">
-      <div class="col-lg-7 col-xl-6 mx-auto">
+      <div class="col-lg-7 col-xl- mx-auto">
         <div class="card card-signin flex-row my-5">
           <div class="card-img-left d-none d-md-flex">
              <!-- Background image for card set in CSS! -->
@@ -24,6 +24,8 @@
             <h5 class="card-title text-center">Register</h5>
             <form class="form-signin">
 
+              <div class="form-row">
+                <div class="col">
               <div class="form-label-group">
                 <select name="accountType" id="accountType" class="form-control selectpicker" placeholder="Select type" required>
                   <option value="doctor" class="dropdown-item">Doctor</option>
@@ -32,6 +34,34 @@
                 <label for="SelectType">Hospital/Clinic</label>
               </select>
               </div>
+            </div>
+
+            <div class="col">
+              <div class="form-label-group">
+                <select name="gender" id="gender" class="form-control selectpicker" placeholder="Select type" required>
+                  <option value="Male" class="dropdown-item">Male</option>
+                  <option value="Female" class="dropdown-item">Female</option>
+                  <option value="Other" class="dropdown-item">Other</option>
+                <label for="SelectType">Gender</label>
+              </select>
+              </div>
+            </div>
+          </div>
+
+              <div class="form-row">
+                <div class="col">
+              <div class="form-label-group">
+                <input type="text" id="firstName" class="form-control" placeholder="First name" required autofocus>
+                <label for="inputFirstName">First Name</label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-label-group">
+                <input type="text" id="lastName" class="form-control" placeholder="Last name" required autofocus>
+                <label for="inputLastName">Last Name</label>
+              </div>
+              </div>
+            </div>
 
               <div class="form-label-group">
                 <input type="text" id="inputUserame" class="form-control" placeholder="Username" required autofocus>
