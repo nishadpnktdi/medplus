@@ -19,7 +19,7 @@ class Dashboard extends CI_Controller{
 	function hospital(){
 		//Allow access to hospital/clinic staff only 
 		if($this->session->userdata('level')==='2'){
-			$this->load->view('dashboard');
+			$this->load->view(base_url().'assets/dashboard/hospital/index.html');
 		} else{
 			echo "Please login";
 		}
@@ -28,18 +28,10 @@ class Dashboard extends CI_Controller{
 	function doctor(){
 		//Allow access to doctor only
 		if($this->session->userdata('level')==='3'){
-			$this->load->view('dashboard');
+			$this->load->view(base_url().'assets/dashboard/doctor/index.html');
 		} else{
 			echo "Please login";
 		}
 	}
-
-	function patient(){
-		//Allow access to patient only
-		if($this->session->userdata('level')==='4'){
-			$this->load->view('dashboard');
-		} else{
-			echo "Please login";
-		}
 	}
-}
+?>
