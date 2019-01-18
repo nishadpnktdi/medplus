@@ -8,30 +8,85 @@ class User extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('UserModel');
-		$this->load->library('session');
-	  	$this->load->library('session','encrypt');
 	  	$this->load->helper('directory');
-	   	$this->load->helper('form');
-	  	$this->load->library(array('form_validation'));
 	}
 
 	public function index(){
-		$this->load->view('login_page');
+		$this->isLoggedIn();
 	}
 
-	public function home(){
-		$this->load->view(base_url().'assets/dashboard/admin/index.html');
-	}
+	// public function home(){
+	// 	redirect('dashboard/index');
+	// }
 
-   
+	// 	function admin(){
+	// 	//Allow access to admins only
+	// 	if($this->session->userdata('user_role')==='1'){
+	// 		// $this->load->view('dashboard/admin/index.html');
+	// 		redirect(base_url().'assets/dashboard/admin/index.html');
+	// 	} else{
+	// 		echo $this->session->set_flashdata('msg',"You're not logged in(Admin)");
+	// 		redirect('user');
+	// 	}
+	// }
+
+	// function hospital(){
+	// 	//Allow access to hospital/clinic staff only 
+	// 	if($this->session->userdata('user_role')==='2'){
+	// 		$this->load->view('dashboard/hospital/index.html');
+	// 	} else{
+	// 		echo $this->session->set_flashdata('msg',"You're not logged in(hospital)");
+	// 		redirect('user');
+	// 	}
+	// }
+
+	// function doctor(){
+	// 	//Allow access to doctor only
+	// 	if($this->session->userdata('user_role')==='3'){
+	// 		$this->load->view('dashboard/doctor/index.html');
+	// 	} else{
+	// 		echo $this->session->set_flashdata('msg',"You're not logged in(doctor)");
+	// 		redirect('user');
+	// 	}
+	// }
+
+
+	function isLoggedIn(){
+		$isLoggedIn = $this->session->userdata('$logged_in');
+		$user_role = $this->session->userdata('$user_role');
+		if(!isset($isLoggedIn) || $isLoggedIn != TRUE)
+		{
+			$this->load->view('login_page');
+		} else{
+
+			if($user_role === '1'){
+				$this->load->view('dashboard/admin/header.php');
+				$this->load->view('dashboard/admin/content.php');
+				$this->load->view('dashboard/admin/footer.php');
+				// $this->admin();
+			}elseif ($user_role === '2'){
+				$this->load->view('dashboard/hospital/header.php');
+				$this->load->view('dashboard/hospital/content.php');
+				$this->load->view('dashboard/hospital/footer.php');
+			}elseif ($user_role === '3'){
+				$this->load->view('dashboard/doctor/header.php');
+				$this->load->view('dashboard/doctor/content.php');
+				$this->load->view('dashboard/doctor/footer.php');
+			}elseif ($user_role === '4'){
+				// redirect('home');
+			}else{
+
+			}
+		}
+	}
+  
     function login(){
     $email    = $this->input->post('email',TRUE);
     $password = $this->input->post('password',TRUE);
-    print_r($validate = $this->UserModel->loginAuth($email,$password));
+    $validate = $this->UserModel->loginAuth($email,$password);
     if($validate->num_rows() > 0){
         $data  = $validate->row_array();
      	$auth_id = $data['auth_id'];
-     	$user_role = $data['user_role'];
         $email = $data['email'];
         $user_role = $data['user_role'];
         $sesdata = array(
@@ -44,19 +99,26 @@ class User extends CI_Controller
         $this->session->set_userdata('user',$sesdata);
 
        		if($user_role === '1'){
-				redirect('user/home');
+       			$this->load->view('dashboard/admin/header.php');
+				$this->load->view('dashboard/admin/content.php');
+				$this->load->view('dashboard/admin/footer.php');
+				// $this->admin();
 			}elseif ($user_role === '2'){
-				redirect('home');
+				$this->load->view('dashboard/hospital/header.php');
+				$this->load->view('dashboard/hospital/content.php');
+				$this->load->view('dashboard/hospital/footer.php');
 			}elseif ($user_role === '3'){
-				redirect('home');
+				$this->load->view('dashboard/doctor/header.php');
+				$this->load->view('dashboard/doctor/content.php');
+				$this->load->view('dashboard/doctor/footer.php');
 			}elseif ($user_role === '4'){
-				redirect('home');
+				// redirect('home');
 			}else{
 
 			}
 
 		}else{
-			echo $this->session->set_flashdata('msg','Email or Password is Wrong');
+			echo $this->session->set_flashdata('msg','Email or Password is wrong');
    			redirect('user');
 		}
 	}
@@ -64,7 +126,7 @@ class User extends CI_Controller
 	public function logout(){
 		$this->session->sess_destroy();
 		echo $this->session->set_flashdata('msg','Logout successful');
-		redirect('user/index');
+		redirect('user');
 	}
 
 
