@@ -12,5 +12,11 @@ class UserModel extends CI_Model{
   	$result=$this->db->get('auth');
     return $result;
   }
+
+  function getHospitals(){
+    $query=$this->db->get('hospital');
+    $result=$query->result_array();
+    return $result;
+  }
  
 }

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>MED+ - Login</title>
+	<title>MED+ Login</title>
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/custom.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -40,8 +40,8 @@
               	<a href="#">Forgot password?</a>
               </div>
               <hr class="my-4">
-              <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit">
-              	<i class="fab fa-google mr-2"></i> Sign in with Google</button>
+              <!-- <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit">
+              	<i class="fab fa-google mr-2"></i> Sign in with Google</button> -->
               <div class="text-center my-3">OR</div>
               <a href="<?php echo base_url(); ?>user/signup_page" class="btn btn-lg btn-facebook btn-block text-uppercase"> Create an account</a>
             </form>

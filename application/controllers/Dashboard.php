@@ -1,13 +1,19 @@
 <?php
-class Dashboard extends CI_Controller{
-	function __construct(){
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Dashboard extends CI_Controller
+{
+	function __construct()
+	{
 		parent::__construct();
 		if($this->session->userdata('logged_in')!==TRUE){
 			redirect('user');
 		}
 	}
 
-	function index(){
+	function index()
+	{
 		//Allow access to admins only
 		if($this->session->userdata('level')==='1'){
 			$this->load->view('dashboard/admin/index.html');
@@ -17,7 +23,8 @@ class Dashboard extends CI_Controller{
 		}
 	}
 
-	function hospital(){
+	function hospital()
+	{
 		//Allow access to hospital/clinic staff only 
 		if($this->session->userdata('level')==='2'){
 			$this->load->view(base_url().'assets/dashboard/hospital/index.html');
@@ -26,7 +33,8 @@ class Dashboard extends CI_Controller{
 		}
 	}
 
-	function doctor(){
+	function doctor()
+	{
 		//Allow access to doctor only
 		if($this->session->userdata('level')==='3'){
 			$this->load->view(base_url().'assets/dashboard/doctor/index.html');
