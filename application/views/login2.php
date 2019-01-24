@@ -34,8 +34,8 @@
                     <div class="col">
                         <a href="#">Forgot password?</a>
                     </div>
-                    <div class="col">
-                        <a href="#">Signup</a>
+                    <div class="col d-flex flex-row-reverse">
+                        <a href="<?php echo base_url(); ?>user/signup_page">Signup</a>
                     </div>
                 </div>
             </form>

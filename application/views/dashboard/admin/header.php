@@ -66,15 +66,15 @@
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="isLoggedIn"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
+                        <a href="<?php echo base_url();?>/admin/admin"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
                     </li>
                     <!-- <li class="menu-title">Hospital</li> -->
                     <!-- /.menu-title -->
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle menu-title" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon far fa-hospital"></i>Hospital</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-puzzle-piece"></i><a href="hospital_view">View hospitals</a></li>
-                            <li><i class="fa fa-id-badge"></i><a href="add_hospital">Add hospital</a></li>
+                            <li><i class="fa fa-puzzle-piece"></i><a href="<?php echo base_url();?>admin/admin/hospital_view">View hospitals</a></li>
+                            <li><i class="fa fa-id-badge"></i><a href="<?php echo base_url();?>admin/admin/add_hospital">Add hospital</a></li>
                             <li><i class="fa fa-bars"></i><a href="ui-tabs.html">Remove hospital</a></li>
                             <!--
                             <li><i class="fa fa-id-card-o"></i><a href="ui-cards.html">Cards</a></li>
@@ -89,16 +89,16 @@
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle menu-title" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fas fa-user-md"></i>Doctor</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-table"></i><a href="tables-basic.html">View doctors</a></li>
-                            <li><i class="fa fa-table"></i><a href="tables-data.html">Add doctors</a></li>
+                            <li><i class="fa fa-table"></i><a href="<?php echo base_url();?>admin/admin/doctor_view">View doctors</a></li>
+                            <li><i class="fa fa-table"></i><a href="<?php echo base_url();?>admin/admin/add_doctor">Add doctors</a></li>
                             <li><i class="fa fa-table"></i><a href="tables-data.html">Remove doctors</a></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle menu-title" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fas fa-users"></i>Patient</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-th"></i><a href="forms-basic.html">View patients</a></li>
-                            <li><i class="menu-icon fa fa-th"></i><a href="forms-advanced.html">Add patients</a></li>
+                            <li><i class="menu-icon fa fa-th"></i><a href="<?php echo base_url();?>admin/admin/patient_view">View patients</a></li>
+                            <li><i class="menu-icon fa fa-th"></i><a href="<?php echo base_url();?>admin/admin/add_patient">Add patients</a></li>
                             <li><i class="menu-icon fa fa-th"></i><a href="forms-advanced.html">Remove patients</a></li>
                         </ul>
                     </li>

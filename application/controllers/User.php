@@ -105,7 +105,8 @@ $this->session->set_userdata($sesdata);
 				// $this->load->view('dashboard/admin/header.php');
 				// $this->load->view('dashboard/admin/content.php');
 				// $this->load->view('dashboard/admin/footer.php');
-				$this->admin();
+				// $this->admin();
+				redirect('admin/admin');
 			}elseif ($user_role === '2'){
 				// $this->load->view('dashboard/hospital/header.php');
 				// $this->load->view('dashboard/hospital/content.php');
@@ -134,18 +135,5 @@ $this->session->set_userdata($sesdata);
 		$this->load->view('signup_page');
 	}
 	
-	function hospital_view()
-	{
-		$data['hospitals']=$this->UserModel->getHospitals();
-		$this->load->view('dashboard/admin/header');
-		$this->load->view('dashboard/admin/hospital_list',$data);
-		$this->load->view('dashboard/admin/footer');
-	}
-	function add_hospital()
-	{
-		$this->load->view('dashboard/admin/header');
-		$this->load->view('dashboard/admin/add_hospital');
-		$this->load->view('dashboard/admin/footer');
-	}
 }
 ?>
