@@ -26,7 +26,9 @@
 
         <div class="content">
         	<div class="my-3">
-        	<button class="btn btn-success" onclick="add_hospital()"><i class="fas fa-plus"></i> Add Patient</button>
+                <a href="<?php echo base_url();?>admin/admin/add_patient">
+                	<button class="btn btn-success" onclick="add_hospital()"><i class="fas fa-plus"></i> Add Patient</button>
+                </a>
         	</div>
             <div class="animated fadeIn">
                 <div class="row">

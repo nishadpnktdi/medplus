@@ -1,10 +1,10 @@
-        <div class="breadcrumbs">
+        <div class="breadcrumbs ">
             <div class="breadcrumbs-inner">
                 <div class="row m-0">
                     <div class="col-sm-4">
                         <div class="page-header float-left">
                             <div class="page-title">
-                                <h1>Dashboard</h1>
+                                <h1>Hospital</h1>
                             </div>
                         </div>
                     </div>
@@ -13,8 +13,8 @@
                             <div class="page-title">
                                 <ol class="breadcrumb text-right">
                                     <li><a href="#">Dashboard</a></li>
-                                    <li><a href="#">Table</a></li>
-                                    <li class="active">Data table</li>
+                                    <li><a href="#">Hospital</a></li>
+                                    <li class="active">View Hospitals</li>
                                 </ol>
                             </div>
                         </div>
@@ -24,9 +24,11 @@
         </div>
 
 
-        <div class="content">
-        	<div class="my-3">
-        	<button class="btn btn-success" onclick="add_hospital()"><i class="fas fa-plus"></i> Add Hospital</button>
+        <div class="content mb-3">
+        	<div class="mb-4">
+                <a href="<?php echo base_url();?>admin/admin/add_hospital">
+            	   <button class="btn btn-success" onclick="add_hospital()"><i class="fas fa-plus"></i> Add Hospital</button>
+                </a>
         	</div>
             <div class="animated fadeIn">
                 <div class="row">
@@ -63,11 +65,14 @@
                                         echo"<td>".$hospital['phone']."</td>";
                                         echo"<td>".$hospital['email']."</td>";
                                         echo"<td>".$hospital['state_id']."</td>";
-
-                                       echo"<td><button class='btn btn-warning' onclick=''><i class='fas fa-pencil-alt'></i></button>";
-										echo"<button class='btn btn-danger' onclick=''><i class='fas fa-trash'></i></button></td>";
-
-										echo"</tr>";
+                                        echo"<td>";
+                                        echo"<a href=". base_url() ."admin/admin/update_hospital>
+                                            <button class='btn btn-warning' ><i class='fas fa-pencil-alt'></i>
+                                            </button></a>";
+                                        echo"<a href=". base_url() ."admin/admin/delete_hospital>
+                                            <button class='btn btn-danger' ><i class='fas fa-trash'></i>
+                                            </button></td></a>";
+										                    echo"</tr>";
                                        $i++;
                                    }
                                    ?>

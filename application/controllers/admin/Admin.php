@@ -19,6 +19,7 @@ class Admin extends CI_Controller {
 					$data['DCount'] = $this->adminModel->getDoctorCount();
 					$data['PCount'] = $this->adminModel->getPatientCount();
 					$data['ACount'] = $this->adminModel->getAppointmentCount();
+					$data['lastApp'] = $this->adminModel->lastAppointment();
 					$this->load->view('dashboard/admin/content.php',$data);
 					$this->load->view('dashboard/admin/footer.php');
 		    } else{
@@ -38,18 +39,40 @@ class Admin extends CI_Controller {
 	function add_hospital()
 	{
 		$this->load->view('dashboard/admin/header');
-		$this->load->view('dashboard/admin/hospital/add_hospital');
+		$data['countries'] = $this->adminModel->countryList();
+		$this->load->view('dashboard/admin/hospital/add_hospital',$data);
 		$this->load->view('dashboard/admin/footer');
 	}
 
 	function delete_hospital()
 	{
-
+		$this->load->view('dashboard/admin/header');
+		$this->load->view('dashboard/admin/hospital/delete_hospital',$data);
+		$this->load->view('dashboard/admin/footer');
 	}
 
 	function update_hospital()
 	{
+		$this->load->view('dashboard/admin/header');
+		$data['countries'] = $this->adminModel->countryList();
+		$this->load->view('dashboard/admin/hospital/update_hospital',$data);
+		$this->load->view('dashboard/admin/footer');
+	}
 
+	function getStateList()
+	{
+		$postData = $this->input->post();
+    $intCounrtyId = $postData['countryId'];
+		$data = $this->adminModel->stateList($intCounrtyId);
+		echo json_encode($data);
+	}
+
+	function getCityList()
+	{
+		$postData = $this->input->post();
+		$intStateId = $postData['stateId'];
+		$data = $this->adminModel->cityList($intStateId);
+		echo json_encode($data);
 	}
 
 
@@ -80,7 +103,9 @@ class Admin extends CI_Controller {
 
 	function update_doctor()
 	{
-
+		$this->load->view('dashboard/admin/header');
+		$this->load->view('dashboard/admin/doctor/update_doctor');
+		$this->load->view('dashboard/admin/footer');
 	}
 
 	//
@@ -140,6 +165,16 @@ class Admin extends CI_Controller {
 	{
 
 	}
+
+//Registration drop-ddown list
+
+	// function getCSCList()
+	// {
+	// 	data['countries'] = $this->adminModel->countryList();
+	// 	data['states'] = $this->adminModel->stateList();
+	// 	data['cities'] = $this->adminModel->cityList();
+	// 	return data;
+	// }
 
 }
 

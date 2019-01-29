@@ -26,7 +26,9 @@
 
         <div class="content">
         	<div class="my-3">
-        	<button class="btn btn-success" onclick="add_hospital()"><i class="fas fa-plus"></i> Add Doctor</button>
+                <a href="<?php echo base_url();?>admin/admin/add_doctor">
+            	   <button class="btn btn-success" onclick="add_hospital()"><i class="fas fa-plus"></i> Add Doctor</button>
+                </a>
         	</div>
             <div class="animated fadeIn">
                 <div class="row">
@@ -63,11 +65,21 @@
                                         echo"<td>".$doctor['gender']."</td>";
                                         echo"<td>".$doctor['email']."</td>";
                                         echo"<td>".$doctor['experience']."</td>";
+                                        ?>
+                                       <td>
+                                        <a href="<?php echo base_url(); ?>admin/admin/update_doctor">
+                                            <button class='btn btn-warning' ><i class='fas fa-pencil-alt'></i>
+                                            </button>
+                                        </a>
 
-                                       echo"<td><button class='btn btn-warning' onclick=''><i class='fas fa-pencil-alt'></i></button>";
-										echo"<button class='btn btn-danger' onclick=''><i class='fas fa-trash'></i></button></td>";
+                                         
 
-										echo"</tr>";
+                                        <a href="<?php echo base_url();?>admin/admin/delete_hospital">
+                                            <button class='btn btn-danger' ><i class='fas fa-trash'></i>
+                                            </button></td>
+                                        </a>
+                                            <?php
+                                        echo"</tr>";
                                        $i++;
                                    }
                                    ?>

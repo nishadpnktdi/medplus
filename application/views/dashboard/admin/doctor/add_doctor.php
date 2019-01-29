@@ -1,7 +1,7 @@
 <div class="col-lg-6 " id="hospital_add">
     <div class="card">
         <div class="card-header">
-            <strong>Doctor</strong> <br>Add a doctor
+            <strong>Doctor</strong> <br>Add doctor
         </div>
         <div class="card-body card-block">
             <form action="#" method="post" enctype="multipart/form-data" class="form-horizontal">
@@ -10,7 +10,7 @@
                     <div class="col col-md-4">
                         <label for="text-input" class=" form-control-label">Doctor Name</label>
                     </div>
-                    <div class="col-12 col-md-8"><input type="text" id="text-input" name="text-input" placeholder="Enter your Hospital name" class="form-control">
+                    <div class="col-12 col-md-8"><input type="text" id="text-input" name="text-input" placeholder="Enter Doctor Name" class="form-control">
                 </div>
             </div>
 

@@ -60,27 +60,18 @@ class User extends CI_Controller
 		$user_role = $this->session->userdata('$user_role');
 		if(!isset($isLoggedIn) || $isLoggedIn != TRUE)
 		{
-			// $this->load->view('login_page');
 			$this->load->view('login2');
 		} else{
 			if($user_role === '1'){
-				// $this->load->view('dashboard/admin/header.php');
-				// $this->load->view('dashboard/admin/content.php');
-				// $this->load->view('dashboard/admin/footer.php');
 				$this->admin();
 			}elseif ($user_role === '2'){
-				// $this->load->view('dashboard/hospital/header.php');
-				// $this->load->view('dashboard/hospital/content.php');
-				// $this->load->view('dashboard/hospital/footer.php');
 				$this->hospital();
 			}elseif ($user_role === '3'){
-				// $this->load->view('dashboard/doctor/header.php');
-				// $this->load->view('dashboard/doctor/content.php');
-				// $this->load->view('dashboard/doctor/footer.php');
 				$this->doctor();
 			}elseif ($user_role === '4'){
 				// redirect('home');
 			}else{
+				//none
 			}
 		}
 	}

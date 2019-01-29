@@ -78,7 +78,7 @@
         <!-- Orders -->
         <div class="orders">
             <div class="row">
-                <div class="col-xl-8">
+                <div class="col-xl-12">
                     <div class="card">
                         <div class="card-body">
                             <h4 class="box-title">Recent Appointments </h4>
@@ -88,91 +88,34 @@
                                 <table class="table ">
                                     <thead>
                                         <tr>
-                                            <th class="serial">#</th>
-                                            <th class="avatar">Avatar</th>
-                                            <th>ID</th>
-                                            <th>Name</th>
-                                            <th>Department</th>
-                                            <th>Time</th>
+                                            <th class="serial">ID</th>
+                                            <th class="avatar">Account ID</th>
+                                            <th>Doctor ID</th>
+                                            <th>Start Time</th>
+                                            <th>End Time</th>
+                                            <th>Channel ID</th>
                                             <th>Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td class="serial">1.</td>
-                                            <td class="avatar">
-                                                <div class="round-img">
-                                                    <a href="#"><img class="rounded-circle" src="<?php echo base_url() ?>assets/admin/images/avatar/1.jpg" alt=""></a>
-                                                </div>
-                                            </td>
-                                            <td> #5469 </td>
-                                            <td>  <span class="name">Louis Stanley</span> </td>
-                                            <td> <span class="product">Orthopaedics</span> </td>
-                                            <td><span class="count">231</span></td>
-                                            <td>
-                                                <span class="badge badge-complete">Complete</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="serial">2.</td>
-                                            <td class="avatar">
-                                                <div class="round-img">
-                                                    <a href="#"><img class="rounded-circle" src="<?php echo base_url() ?>assets/admin/images/avatar/2.jpg" alt=""></a>
-                                                </div>
-                                            </td>
-                                            <td> #5468 </td>
-                                            <td>  <span class="name">Gregory Dixon</span> </td>
-                                            <td> <span class="product">Dentistry</span> </td>
-                                            <td><span class="count">250</span></td>
-                                            <td>
-                                                <span class="badge badge-complete">Complete</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="serial">3.</td>
-                                            <td class="avatar">
-                                                <div class="round-img">
-                                                    <a href="#"><img class="rounded-circle" src="<?php echo base_url() ?>assets/admin/images/avatar/3.jpg" alt=""></a>
-                                                </div>
-                                            </td>
-                                            <td> #5467 </td>
-                                            <td>  <span class="name">Catherine Dixon</span> </td>
-                                            <td> <span class="product">Cardiology</span> </td>
-                                            <td><span class="count">250</span></td>
-                                            <td>
-                                                <span class="badge badge-complete">Complete</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="serial">4.</td>
-                                            <td class="avatar">
-                                                <div class="round-img">
-                                                    <a href="#"><img class="rounded-circle" src="<?php echo base_url() ?>assets/admin/images/avatar/4.jpg" alt=""></a>
-                                                </div>
-                                            </td>
-                                            <td> #5466 </td>
-                                            <td>  <span class="name">Mary Silva</span> </td>
-                                            <td> <span class="product">Gynaecology</span> </td>
-                                            <td><span class="count">250</span></td>
-                                            <td>
-                                                <span class="badge badge-pending">Pending</span>
-                                            </td>
-                                        </tr>
-                                        <tr class=" pb-0">
-                                            <td class="serial">5.</td>
-                                            <td class="avatar pb-0">
-                                                <div class="round-img">
-                                                    <a href="#"><img class="rounded-circle" src="<?php echo base_url() ?>assets/admin/images/avatar/6.jpg" alt=""></a>
-                                                </div>
-                                            </td>
-                                            <td> #5465 </td>
-                                            <td>  <span class="name">Johnny Stephens</span> </td>
-                                            <td> <span class="product">ENT</span> </td>
-                                            <td><span class="count">250</span></td>
-                                            <td>
-                                                <span class="badge badge-complete">Complete</span>
-                                            </td>
-                                        </tr>
+                                        
+                                            <?php
+                                            
+                                            foreach($lastApp as $LApp){
+                                                echo"<tr>";
+                                              echo "<td>".$LApp['id']."</td>";
+                                              echo "<td>".$LApp['account_id']."</td>";
+                                              echo "<td> <span class='doctorName'>".$LApp['doctor_id']."</span> </td>";
+                                              echo "<td> <span class='startTime'>".$LApp['start_time']."</span> </td>";
+                                              echo "<td><span class='endTime'>".$LApp['end_time']."</span></td>";
+                                              echo "<td><span class='channel'>".$LApp['channel_id']."</span></td>";
+                                              echo "<td><span class='status'>".$LApp['status_id']."</span></td>";
+                                              echo" </tr>";
+                                            }
+                                           
+                                            ?>
+                                        
+
                                     </tbody>
                                 </table>
                                 </div> <!-- /.table-stats -->
@@ -189,3 +132,43 @@
                                                                 <!-- /.content -->
                                                                 <div class="clearfix"></div>
                                                                 <!-- Footer -->
+
+    <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title">Recently Added Doctors</strong>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Sl.No</th>
+                                        <th scope="col">Doctor</th>
+                                        <th scope="col">Speciality</th>
+                                        <th scope="col">Fee</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Sanoob</td>
+                                        <td>MBBBS,MD</td>
+                                        <td>250</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Nishad</td>
+                                        <td>Gynacology</td>
+                                        <td>150</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Fuad</td>
+                                        <td>Dental</td>
+                                        <td>200</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>

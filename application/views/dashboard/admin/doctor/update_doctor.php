@@ -1,16 +1,16 @@
 <div class="col-lg-6 " id="hospital_add">
     <div class="card">
         <div class="card-header">
-            <strong>Patient</strong> <br>Add Patient
+            <strong>Doctor</strong> <br>Update doctor
         </div>
         <div class="card-body card-block">
             <form action="#" method="post" enctype="multipart/form-data" class="form-horizontal">
 
                 <div class="row form-group">
                     <div class="col col-md-4">
-                        <label for="text-input" class=" form-control-label">Patient Name</label>
+                        <label for="text-input" class=" form-control-label">Doctor Name</label>
                     </div>
-                    <div class="col-12 col-md-8"><input type="text" id="text-input" name="text-input" placeholder="Enter your name" class="form-control">
+                    <div class="col-12 col-md-8"><input type="text" id="text-input" name="text-input" placeholder="Enter Doctor Name" class="form-control">
                 </div>
             </div>
 
@@ -69,7 +69,7 @@
             </div>
 
             <div class="form-actions form-group col-md-4">
-                <button type="submit" class="btn btn-primary btn-md">Submit</button>
+                <button type="submit" class="btn btn-primary btn-md">Update</button>
                 <button type="reset" class="btn btn-primary btn-md">Clear</button>
             </div>
             
