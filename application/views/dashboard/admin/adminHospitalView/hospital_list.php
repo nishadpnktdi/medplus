@@ -26,7 +26,7 @@
 
         <div class="content mb-3">
         	<div class="mb-4">
-                <a href="<?php echo base_url();?>admin/admin/add_hospital">
+                <a href="<?php echo base_url();?>adminController/admin/add_hospital">
             	   <button class="btn btn-success" onclick="add_hospital()"><i class="fas fa-plus"></i> Add Hospital</button>
                 </a>
         	</div>
@@ -66,10 +66,10 @@
                                         echo"<td>".$hospital['email']."</td>";
                                         echo"<td>".$hospital['state_id']."</td>";
                                         echo"<td>";
-                                        echo"<a href=". base_url() ."admin/admin/update_hospital>
+                                        echo"<a href=". base_url() ."adminController/admin/update_hospital>
                                             <button class='btn btn-warning' ><i class='fas fa-pencil-alt'></i>
                                             </button></a>";
-                                        echo"<a href=". base_url() ."admin/admin/delete_hospital>
+                                        echo"<a href=". base_url() ."adminController/admin/delete_hospital>
                                             <button class='btn btn-danger' ><i class='fas fa-trash'></i>
                                             </button></td></a>";
 										                    echo"</tr>";

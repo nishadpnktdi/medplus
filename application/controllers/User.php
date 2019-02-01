@@ -97,7 +97,7 @@ $this->session->set_userdata($sesdata);
 				// $this->load->view('dashboard/admin/content.php');
 				// $this->load->view('dashboard/admin/footer.php');
 				// $this->admin();
-				redirect('admin/admin');
+				redirect('adminController/admin');
 			}elseif ($user_role === '2'){
 				// $this->load->view('dashboard/hospital/header.php');
 				// $this->load->view('dashboard/hospital/content.php');
@@ -117,14 +117,16 @@ $this->session->set_userdata($sesdata);
 			redirect('user');
 		}
 	}
+
 	public function logout(){
 		$this->session->sess_destroy();
 		echo $this->session->set_flashdata('msg','Logout successful');
 		redirect('user');
 	}
+	
 	public function signup_page(){
 		$this->load->view('signup_page');
 	}
-	
+
 }
 ?>

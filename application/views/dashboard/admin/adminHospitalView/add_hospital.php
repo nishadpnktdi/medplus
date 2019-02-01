@@ -27,7 +27,7 @@
  <!-- add hospital -->
           <div class="mb-md-4  ml-md-3   col-lg-8" >
           <!-- <div class="mb-md-3  ml-md-3   col-lg-8" > -->
-                <a href="<?php echo base_url();?>admin/admin/hospital_view">
+                <a href="<?php echo base_url();?>adminController/admin/hospital_view">
                   <button class="btn btn-success" onclick="add_hospital()">
                     <i class="fas fa-angle-left"></i> Back
                   </button>
