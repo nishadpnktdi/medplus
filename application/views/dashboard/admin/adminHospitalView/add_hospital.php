@@ -161,13 +161,13 @@
 
   $(document).ready(function(){
 
-   // Department change
+   // Country change
    $('#selCountry').change(function(){
      var countryId = $(this).val();
 
      // AJAX request
      $.ajax({
-       url:'<?php echo base_url(); ?>admin/admin/getStateList',
+       url:'<?php echo base_url(); ?>adminController/admin/getStateList',
        method: 'post',
        data: {countryId: countryId},
        dataType: 'json',
@@ -190,7 +190,7 @@
 
     // AJAX request
     $.ajax({
-      url:'<?php echo base_url();?>admin/admin/getCityList',
+      url:'<?php echo base_url();?>adminController/admin/getCityList',
       method: 'post',
       data: {stateId: stateId},
       dataType: 'json',

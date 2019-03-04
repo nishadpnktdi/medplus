@@ -4,7 +4,7 @@
                     <div class="col-sm-4">
                         <div class="page-header float-left">
                             <div class="page-title">
-                                <h1>Dashboard</h1>
+                                <h1>Doctor</h1>
                             </div>
                         </div>
                     </div>
@@ -13,8 +13,8 @@
                             <div class="page-title">
                                 <ol class="breadcrumb text-right">
                                     <li><a href="#">Dashboard</a></li>
-                                    <li><a href="#">Table</a></li>
-                                    <li class="active">Data table</li>
+                                    <li><a href="#">Doctor</a></li>
+                                    <li class="active">View Doctors</li>
                                 </ol>
                             </div>
                         </div>
@@ -25,9 +25,9 @@
 
 
         <div class="content">
-        	<div class="my-3">
-                <a href="<?php echo base_url();?>admin/admin/add_doctor">
-            	   <button class="btn btn-success" onclick="add_hospital()"><i class="fas fa-plus"></i> Add Doctor</button>
+        	<div class="mb-4">
+                <a href="<?php echo base_url();?>adminController/admin/add_doctor">
+            	   <button class="btn btn-success" onclick="add_doctor()"><i class="fa fa-plus"></i> Add Doctor</button>
                 </a>
         	</div>
             <div class="animated fadeIn">
@@ -36,7 +36,7 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <strong class="card-title">Data Table</strong>
+                                <strong class="card-title">Doctor List</strong>
                             </div>
                             <div class="card-body">
                                 <table id="bootstrap-data-table" class="table table-striped table-bordered">
@@ -65,20 +65,13 @@
                                         echo"<td>".$doctor['gender']."</td>";
                                         echo"<td>".$doctor['email']."</td>";
                                         echo"<td>".$doctor['experience']."</td>";
-                                        ?>
-                                       <td>
-                                        <a href="<?php echo base_url(); ?>admin/admin/update_doctor">
-                                            <button class='btn btn-warning' ><i class='fas fa-pencil-alt'></i>
-                                            </button>
-                                        </a>
-
-                                         
-
-                                        <a href="<?php echo base_url();?>admin/admin/delete_hospital">
-                                            <button class='btn btn-danger' ><i class='fas fa-trash'></i>
-                                            </button></td>
-                                        </a>
-                                            <?php
+                                        echo"<td>";
+                                        echo"<a href=".base_url()."admin/admin/update_doctor>
+                                            <button class='btn btn-warning'><i class='fa fa-pencil-alt'></i>
+                                            </button></a>";
+                                        echo"<a href=".base_url()."admin/admin/delete_hospital>
+                                            <button class='btn btn-danger' ><i class='fa fa-trash'></i>
+                                            </button></a></td>";
                                         echo"</tr>";
                                        $i++;
                                    }
@@ -93,24 +86,3 @@
                 </div>
             </div><!-- .animated -->
         </div><!-- .content -->
-
-
-        <div class="clearfix"></div>
-
-         <script src="<?php echo base_url(); ?>assets/admin/js/lib/data-table/datatables.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/admin/js/lib/data-table/dataTables.bootstrap.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/admin/js/lib/data-table/dataTables.buttons.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/admin/js/lib/data-table/buttons.bootstrap.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/admin/js/lib/data-table/jszip.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/admin/js/lib/data-table/vfs_fonts.js"></script>
-    <script src="<?php echo base_url(); ?>assets/admin/js/lib/data-table/buttons.html5.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/admin/js/lib/data-table/buttons.print.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/admin/js/lib/data-table/buttons.colVis.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/admin/js/init/datatables-init.js"></script>
-
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-          $('#bootstrap-data-table-export').DataTable();
-      } );
-  </script>

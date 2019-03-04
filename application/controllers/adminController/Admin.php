@@ -14,12 +14,14 @@ class Admin extends CI_Controller {
 	public function index()
 	{
 		if($this->session->userdata('user_role') === '1'){
-		    	$this->load->view('dashboard/admin/header.php');
+				  $title="Admin Dashboard - MedPlus";
+
 				  $data['HCount'] = $this->adminModel->getHospitalCount();
 					$data['DCount'] = $this->adminModel->getDoctorCount();
 					$data['PCount'] = $this->adminModel->getPatientCount();
 					$data['ACount'] = $this->adminModel->getAppointmentCount();
 					$data['lastApp'] = $this->adminModel->lastAppointment();
+					$this->load->view('dashboard/admin/header.php',$title);
 					$this->load->view('dashboard/admin/content.php',$data);
 					$this->load->view('dashboard/admin/footer.php');
 		    } else{
@@ -149,7 +151,7 @@ class Admin extends CI_Controller {
 	{
 		$data['appointments']=$this->UserModel->getAppointments();
 		$this->load->view('dashboard/admin/header');
-		$this->load->view('dashboard/admin/adminAppointmentView/appointment_list');
+		$this->load->view('dashboard/admin/adminAppointmentView/appointment_list',$data);
 		$this->load->view('dashboard/admin/footer');
 	}
 
@@ -165,7 +167,7 @@ class Admin extends CI_Controller {
 
 	}
 
-	function update_appontment()
+	function update_appointment()
 	{
 
 	}

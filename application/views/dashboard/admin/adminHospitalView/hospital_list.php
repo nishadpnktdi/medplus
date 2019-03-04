@@ -24,10 +24,10 @@
         </div>
 
 
-        <div class="content mb-3">
+        <div class="content">
         	<div class="mb-4">
                 <a href="<?php echo base_url();?>adminController/admin/add_hospital">
-            	   <button class="btn btn-success" onclick="add_hospital()"><i class="fas fa-plus"></i> Add Hospital</button>
+            	   <button class="btn btn-success" onclick="add_hospital()"><i class="fa fa-plus"></i> Add Hospital</button>
                 </a>
         	</div>
             <div class="animated fadeIn">
@@ -36,7 +36,7 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <strong class="card-title">Data Table</strong>
+                                <strong class="card-title">Hospital List</strong>
                             </div>
                             <div class="card-body">
                                 <table id="bootstrap-data-table" class="table table-striped table-bordered">
@@ -66,12 +66,12 @@
                                         echo"<td>".$hospital['email']."</td>";
                                         echo"<td>".$hospital['state_id']."</td>";
                                         echo"<td>";
-                                        echo"<a href=". base_url() ."adminController/admin/update_hospital>
-                                            <button class='btn btn-warning' ><i class='fas fa-pencil-alt'></i>
+                                        echo"<a href=".base_url()."adminController/admin/update_hospital>
+                                            <button class='btn btn-warning'><i class='fas fa-pencil-alt'></i>
                                             </button></a>";
-                                        echo"<a href=". base_url() ."adminController/admin/delete_hospital>
-                                            <button class='btn btn-danger' ><i class='fas fa-trash'></i>
-                                            </button></td></a>";
+                                        echo"<a href=".base_url()."adminController/admin/delete_hospital>
+                                            <button class='btn btn-danger'><i class='fas fa-trash'></i>
+                                            </button></a></td>";
 										                    echo"</tr>";
                                        $i++;
                                    }
@@ -86,24 +86,3 @@
                 </div>
             </div><!-- .animated -->
         </div><!-- .content -->
-
-
-        <div class="clearfix"></div>
-
-         <script src="<?php echo base_url(); ?>assets/admin/js/lib/data-table/datatables.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/admin/js/lib/data-table/dataTables.bootstrap.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/admin/js/lib/data-table/dataTables.buttons.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/admin/js/lib/data-table/buttons.bootstrap.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/admin/js/lib/data-table/jszip.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/admin/js/lib/data-table/vfs_fonts.js"></script>
-    <script src="<?php echo base_url(); ?>assets/admin/js/lib/data-table/buttons.html5.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/admin/js/lib/data-table/buttons.print.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/admin/js/lib/data-table/buttons.colVis.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/admin/js/init/datatables-init.js"></script>
-
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-          $('#bootstrap-data-table-export').DataTable();
-      } );
-  </script>

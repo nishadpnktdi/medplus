@@ -1,78 +1,29 @@
-<div class="col-lg-6 " id="hospital_add">
+<div class="content">
+  <div class="animated fadeIn">
     <div class="card">
         <div class="card-header">
             <strong>Doctor</strong> <br>Add doctor
         </div>
-        <div class="card-body card-block">
+        <div class="card-body">
+
             <form action="#" method="post" enctype="multipart/form-data" class="form-horizontal">
+              <div class="form-group row">
+                  <label for="colFormLabel" class="col-sm-2 col-form-label">Name</label>
+                  <div class="col">
+                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name">
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="col">
+                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name">
+                  </div>
+                </div>
 
-                <div class="row form-group">
-                    <div class="col col-md-4">
-                        <label for="text-input" class=" form-control-label">Doctor Name</label>
+                <div class="form-group row">
+                    <label for="colFormLabel" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col col-md-5">
+                      <input type="email" class="form-control" id="email" name="email" placeholder="email">
                     </div>
-                    <div class="col-12 col-md-8"><input type="text" id="text-input" name="text-input" placeholder="Enter Doctor Name" class="form-control">
-                </div>
-            </div>
-
-            <div class="row form-group">
-                <div class="col col-md-4"><label for="email-input" class=" form-control-label">Email</label>
-            </div>
-            <div class="col-8 col-md-"><input type="email" id="email-input" name="email-input" placeholder="Enter Email" class="form-control">
-        </div>
-    </div>
-
-    <div class="row form-group">
-        <div class="col col-md-4"><label for="phone" class=" form-control-label">Phone</label></div>
-        <div class="col-12 col-md-8"><input type="number" name="phone" placeholder="Phone Number" class="form-control"></div>
-    </div>
-
-    <div class="row form-group">
-        <div class="col col-md-4"><label for="password-input" class=" form-control-label">Enter Password</label></div>
-        <div class="col-12 col-md-8"><input type="password" id="password-input" name="password-input" placeholder="Enter Password" class="form-control"><small class="help-block form-text">Please enter a complex password</small></div>
-    </div>
-
-    <div class="row form-group">
-        <div class="col col-md-4"><label for="retype-password" class="form-control-label">Confirm Password</label></div>
-        <div class="col-12 col-md-8"><input type="password" name="retype-password" placeholder="Confirm Password" class="form-control"><small class="help-block form-text">Please re-type password</small></div>
-    </div>
-    
-    <div class="row">
-        <div class="col">
-            <div class="row form-group">
-                <div class="col col-md-3">
-                    <label for="password-input" name="address" class=" form-control-label">Address
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="form-row">
-        <div class="form-group col-md-4">
-            <label for="city">City</label>
-            <select id="inputState" class="form-control" name="city">
-                <option selected>Select City</option>
-                <option>...</option>
-            </select>                                        
-        </div>
-
-            <div class="form-group col-md-4">
-                <label for="inputState">State</label>
-                <select id="inputState" class="form-control" name="state">
-                    <option selected>Select State</option>
-                    <option>...</option>
-                </select>
-            </div>
-
-            <div class="form-group col-md-4">
-                <label for="inputState">Pin</label>
-                    <input type="text" name="pin" placeholder="Pin" class="form-control">
-            </div>
-
-            <div class="form-actions form-group col-md-4">
-                <button type="submit" class="btn btn-primary btn-md">Submit</button>
-                <button type="reset" class="btn btn-primary btn-md">Clear</button>
-            </div>
-            
+                  </div>
             </form>
         </div>
     </div>
