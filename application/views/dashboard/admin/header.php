@@ -16,7 +16,7 @@
 
     <link rel="apple-touch-icon" href="https://i.imgur.com/QRAUqs9.png">
     <link rel="shortcut icon" href="https://i.imgur.com/QRAUqs9.png">
-
+<!-- css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -109,11 +109,9 @@
                             <li><i class="menu-icon ti-themify-logo"></i><a href="<?php echo base_url();?>adminController/admin/add_patient">Add patient</a></li>
                         </ul>
                     </li>
-                    <li>
 
                         <!-- <a href="widgets.html"> <i class="menu-icon ti-email"></i>Widgets </a> -->
 
-                    </li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-calendar-check"></i>Appointment</a>
                         <ul class="sub-menu children dropdown-menu">
@@ -123,6 +121,14 @@
                     </li>
 
                     <!-- <li class="menu-title">Extras</li> --><!-- /.menu-title -->
+
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fas fa-notes-medical"></i>Department</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-line-chart"></i><a href="<?php echo base_url();?>adminController/admin/department_view">View department</a></li>
+                            <li><i class="menu-icon fa fa-area-chart"></i><a href="<?php echo base_url();?>adminController/admin/add_department">Add department</a></li>
+                        </ul>
+                    </li>
 
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -135,8 +141,8 @@
         <header id="header" class="header">
             <div class="top-left">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="<?php echo base_url(); ?>">
-                        <img src="<?php echo base_url(); ?>assets/admin/images/logo.png" alt="Logo"></a>
+                    <!-- <a class="navbar-brand" href="<?php echo base_url(); ?>">
+                        <img src="<?php echo base_url(); ?>assets/admin/images/logo.png" alt="Logo"></a> -->
                     <a class="navbar-brand hidden" href="./">
                         <img src="<?php echo base_url(); ?>assets/admin/images/logo2.png" alt="Logo"></a>
                     <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>

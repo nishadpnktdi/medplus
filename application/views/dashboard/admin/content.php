@@ -54,7 +54,7 @@
                                     </div>
                                     <div class="stat-content">
                                         <div class="text-left dib">
-                                            <div class="stat-text"><span class="count"><?Php echo $PCount;?></span></div>
+                                            <div class="stat-text"><span class="count"><?php echo $PCount; ?></span></div>
                                             <div class="stat-heading">Patients</div>
                                         </div>
                                     </div>
@@ -103,10 +103,14 @@
                                                 <tr>
                                                     <th class="serial">#</th>
                                                     <th class="avatar">Avatar</th>
-                                                    <th>Name</th>
-                                                    <th>ID</th>
-                                                    <th>Doctor</th>
-                                                    <th>Start Time</th>
+                                                    <th>Appointment ID</th>
+                                                    <th>Date</th>
+                                                    <th>First name</th>
+                                                    <th>Doctor name</th>
+                                                    <th>Hospital name</th>
+                                                    <th>Specialization</th>
+                                                    <th>Start time</th>
+                                                    <th>End time</th>
                                                     <th>Status</th>
                                                 </tr>
                                             </thead>

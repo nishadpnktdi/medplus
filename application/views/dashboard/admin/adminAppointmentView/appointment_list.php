@@ -4,7 +4,7 @@
                     <div class="col-sm-4">
                         <div class="page-header float-left">
                             <div class="page-title">
-                                <h1>Patient</h1>
+                                <h1>Appointment</h1>
                             </div>
                         </div>
                     </div>
@@ -26,7 +26,7 @@
 
         <div class="content">
         	<div class="mb-4">
-                <a href="<?php echo base_url();?>admin/admin/add_appointment">
+                <a href="<?php echo base_url();?>adminController/admin/add_appointment">
                 	<button class="btn btn-success" onclick="add_hospital()"><i class="fa fa-plus"></i> New Appointment</button>
                 </a>
         	</div>

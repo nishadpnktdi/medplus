@@ -1,66 +1,52 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>MED+ Signup</title>
-    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/signup.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.bundle.min.js" type="text/javascript"></script>
-  </head>
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-7 col-xl- mx-auto">
-          <div class="flex-row my-5">
-            <div class="d-none d-md-flex">
-              <!-- Background image for card set in CSS! -->
+    <head>
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/signup.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <title>Signup - MedPlus</title>
+    </head>
+    <body>
+
+            <div class="container col-8 h-100">
+              <div class="text-center my-5">
+                  <img src="<?php echo base_url(); ?>assets/img/logo.png"/ width="200">
+              </div>
+              <h3 class="text-center my-4">Choose a account type</h3>
+              <div class="row h-100 justify-content-center align-items-center">
+                <div class="col col-3">
+              <a href="<?php echo base_url(); ?>user/signup_page_doctor">
+            <div class="card bg-light">
+              <div class="card-body">
+                <div class="card-img-top text-center">
+                  <i class="fa fa-user-md h1 text-dark"></i>
+                <h5 class="card-title text-dark my-2 text-decoration-none">Doctor</h5>
+              </div>
             </div>
-              <h5 class="text-center">Register</h5>
-              <form class="form-signin">
-                <div class="form-row">
+          </div>
+        </a>
+        </div>
 
-                </div>
-                <div class="form-row">
-                  <div class="col">
-                    <div class="form-label-group">
-                      <input type="text" id="firstName" class="form-control" placeholder="First name" required autofocus>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="form-label-group">
-                      <input type="text" id="lastName" class="form-control" placeholder="Last name" required autofocus>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-label-group">
-                  <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
-                </div>
+          <div class="col col-3">
+              <a href="<?php echo base_url(); ?>user/signup_page_hospital" class="card_admin">
+            <div class="card bg-light">
+              <div class="card-body">
+                <div class="card-img-top text-center">
+                  <i class="fa fa-hospital h1 text-dark"></i>
+                <h5 class="card-title text-dark my-2">Hospital/Clinic</h5>
+              </div>
+            </div>
+          </div>
+        </a>
+        </div>
+          </div>
+          <div class="text-center my-5 h5"><a href="<?php echo base_url();?>user">Back</div>
 
-                <div class="form-label-group">
-                  <input type="email" id="inputPhone" class="form-control" placeholder="Phone number" required>
-                </div>
-
-                <hr>
-                <div class="form-label-group">
-                  <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                </div>
-
-                <div class="form-label-group">
-                  <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Password" required>
-                </div>
-                <button class="btn btn-lg btn-primary btn-block text-uppercase btn-register" type="submit">Register</button>
-
-                <hr class="my-4">
-                <div class="text-center my-3">OR</div>
-                <a href="index" class="d-block text-center mt-2 my-3 btn btn-lg btn-google btn-block text-uppercase" href="#">Sign In</a>
-              </form>
           </div>
         </div>
-      </div>
-    </div>
-  </body>
+    </body>
 </html>

@@ -172,6 +172,26 @@ class Admin extends CI_Controller {
 
 	}
 
+	function department_view()
+	{
+		$data['departments']=$this->UserModel->getDepartments();
+		$this->load->view('dashboard/admin/header');
+		$this->load->view('dashboard/admin/adminDepartmentView/department_list',$data);
+		$this->load->view('dashboard/admin/footer');
+	}
+
+	function add_department()
+	{
+		$this->load->view('dashboard/admin/header');
+		$this->load->view('dashboard/admin/adminDepartmentView/add_department');
+		$this->load->view('dashboard/admin/footer');
+	}
+
+	function delete_department()
+	{
+
+	}
+
 }
 
 /* End of file admin.php */

@@ -23,3 +23,9 @@ body{
 a{
     color:#fff;
 }
+.card_admin:hover,.card_admin div:hover
+{
+    color: white;
+    opacity: .90;
+    text-decoration: none;
+}
