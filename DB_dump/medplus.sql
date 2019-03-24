@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 16, 2019 at 07:34 AM
+-- Generation Time: Mar 24, 2019 at 03:39 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -108,10 +108,7 @@ CREATE TABLE `tbl_auth` (
 --
 
 INSERT INTO `tbl_auth` (`auth_id`, `email`, `phone`, `password`, `user_role`, `last_update`, `is_active`, `created`) VALUES
-(1000, 'admin@medplus.com', '', '12345', '1', '2019-01-26 04:40:46', 1, '2019-01-26 04:40:46'),
-(1001, '', '', '', '3', '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00'),
-(1002, '', '', '', '3', '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00'),
-(1003, 't', 't', 't', '2', '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00');
+(1000, 'admin@medplus.com', '', '123456', '1', '2019-03-22 13:11:04', 1, '2019-01-26 04:40:46');
 
 -- --------------------------------------------------------
 
@@ -790,8 +787,19 @@ CREATE TABLE `tbl_forgot_password` (
   `id` int(11) NOT NULL,
   `email` varchar(255) NOT NULL,
   `random_key` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL
+  `expires` datetime NOT NULL,
+  `last_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_forgot_password`
+--
+
+INSERT INTO `tbl_forgot_password` (`id`, `email`, `random_key`, `expires`, `last_update`) VALUES
+(11, 'admin@medplus.com', 'ax4Mu6', '2019-03-23 01:25:51', '2019-03-22 19:45:51'),
+(12, 'admin@medplus.com', 'ECTpqB', '2019-03-23 01:31:41', '2019-03-22 19:51:41'),
+(13, 'admin@medplus.com', 'qcDzMi', '2019-03-23 01:36:20', '2019-03-22 19:56:20'),
+(14, 'admin@medplus.com', 'xqrn97', '2019-03-23 01:38:52', '2019-03-22 19:58:52');
 
 -- --------------------------------------------------------
 
@@ -1105,7 +1113,7 @@ ALTER TABLE `tbl_appointment_status`
 -- AUTO_INCREMENT for table `tbl_auth`
 --
 ALTER TABLE `tbl_auth`
-  MODIFY `auth_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1004;
+  MODIFY `auth_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1001;
 
 --
 -- AUTO_INCREMENT for table `tbl_cities`
@@ -1135,7 +1143,7 @@ ALTER TABLE `tbl_fcm_cloud`
 -- AUTO_INCREMENT for table `tbl_forgot_password`
 --
 ALTER TABLE `tbl_forgot_password`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `tbl_hospital`
